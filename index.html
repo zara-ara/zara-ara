@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> PWA Ara</title>
+
+    <!-- Manifest untuk PWA -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Icon untuk tab browser -->
+    <link rel="icon" href="icon farrel.png" sizes="192x192" type="image/png" />
+    <link rel="apple-touch-icon" href="icon Farrel.png" />
+
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        background-color:rgb(58, 114, 167);
+    }
+</style>
+<body>
+    <h1>Hello Guys, Ini PWA Ara!</h1>
+    <p>Aku Nur Zahra Afifah, dengan NIM 0920240030.</p>
+    <p>Ini hari pertama aku belajar PWA</p>
+    <p>Kamu bisa unduh PWA aku yaa!</p>
+
+    <script>
+        // Daftarkan Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+            .then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(function(error) {
+                console.log('ServiceWorker registration failed: ', error);
+            });
+        }
+    </script>
+</body>
+</html>
+
